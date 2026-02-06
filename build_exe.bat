@@ -1,25 +1,25 @@
 @echo off
 echo ========================================
-echo    DuplicateFinder - Build Executavel
+echo    DuplicateFinder - Build Executable
 echo ========================================
 echo.
 
-REM Verificar se PyInstaller esta instalado
+REM Check if PyInstaller is installed
 pip show pyinstaller >nul 2>&1
 if errorlevel 1 (
-    echo [INFO] Instalando PyInstaller...
+    echo [INFO] Installing PyInstaller...
     pip install pyinstaller
 )
 
-REM Verificar se send2trash esta instalado
+REM Check if send2trash is installed
 pip show send2trash >nul 2>&1
 if errorlevel 1 (
-    echo [INFO] Instalando send2trash...
+    echo [INFO] Installing send2trash...
     pip install send2trash
 )
 
 echo.
-echo [INFO] Gerando executavel...
+echo [INFO] Building executable...
 echo.
 
 pyinstaller --onefile --windowed --name "DuplicateFinder" --icon=NONE duplicate_finder.py
@@ -27,9 +27,9 @@ pyinstaller --onefile --windowed --name "DuplicateFinder" --icon=NONE duplicate_
 echo.
 echo ========================================
 if exist "dist\DuplicateFinder.exe" (
-    echo [SUCESSO] Executavel criado em: dist\DuplicateFinder.exe
+    echo [SUCCESS] Executable created at: dist\DuplicateFinder.exe
 ) else (
-    echo [ERRO] Falha ao criar executavel!
+    echo [ERROR] Failed to create executable!
 )
 echo ========================================
 echo.
