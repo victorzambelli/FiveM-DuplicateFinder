@@ -2,7 +2,7 @@
 DuplicateFinder - Tool for finding and removing duplicate files between folders
 Developed for FiveM/RedM - Extensions: .ycd, .ydr, .ytyp, .ybn
 
-Author: Odisseia Server
+Author: Victor Z
 """
 
 import os
